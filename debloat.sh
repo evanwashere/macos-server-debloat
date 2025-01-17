@@ -37,10 +37,8 @@ com.apple.nfcd
 com.apple.metadata.mds
 com.apple.endpointsecurity.endpointsecurityd
 org.cups.cupsd
-com.apple.logd
 com.apple.ReportCrash.Root
 com.apple.audioanalyticsd
-com.apple.logd_helper
 com.apple.CrashReporterSupportHelper
 com.apple.audio.audiomxd
 com.apple.accessoryupdaterd
@@ -69,10 +67,21 @@ com.apple.contextstored
 com.apple.mediaremoted
 com.apple.mdmclient.daemon
 com.apple.online-auth-agent.xpc
+com.apple.remotemanagementd
+com.apple.lsd
+com.apple.coreservices.appleevents
+com.apple.nsurlsessiond_privileged
+
+# disables dumb logs but services complain in launchd logs
+system/com.apple.logd
+system/com.apple.logd_helper
 
 sudo launchctl bootout system/{name}
 sudo launchctl disable system/{name}
 
+com.apple.askpermissiond
+com.apple.parsecd
+com.apple.parsec-fbf
 com.apple.mdmclient.agent
 com.apple.routined
 com.apple.AppSSOAgent
@@ -228,9 +237,16 @@ com.apple.knowledgeconstructiond
 com.apple.ContextStoreAgent
 com.apple.intelligencecontextd
 com.apple.proactived
+com.apple.coreservices.useractivityd
+com.apple.milod
+com.apple.nsurlsessiond
 
-# screen sharing
+# stage manager
+com.apple.WindowManager.agent
+
+# screen sharing (disabled to stop logs spam for missing audio)
 com.apple.replayd
+com.apple.SystemUIServer.agent
 
 launchctl bootout gui/501/{name}
 launchctl disable gui/501/{name}
@@ -241,6 +257,7 @@ com.apple.geod
 com.apple.accessibility.mediaaccessibilityd
 com.apple.TextInputUI.xpc.CursorUIViewService
 com.apple.siri.context.service
+com.apple.lsd
 
 launchctl bootout user/501/{name}
 launchctl disable user/501/{name}
