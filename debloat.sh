@@ -1,263 +1,272 @@
 # https://mroi.github.io/apple-internals/
 
-com.apple.nearbyd
-com.apple.dprivacyd
-com.apple.locationd
-com.apple.wifianalyticsd
-com.apple.icloud.searchpartyd
-com.apple.icloud.findmydeviced
-com.apple.osanalytics.osanalyticshelper
-com.apple.SubmitDiagInfo
-com.apple.symptomsd-diag
-com.apple.symptomsd
-com.apple.rtcreportingd
-com.apple.systemstats.daily
-com.apple.systemstats.analysis
-com.apple.systemstats.microstackshot_periodic
-com.apple.backupd
-com.apple.backupd-helper
-com.apple.cloudd
-com.apple.seld
-com.apple.findmymacmessenger
-com.apple.GameController.gamecontrollerd
-com.apple.rapportd
-com.apple.triald.system
-com.apple.ecosystemanalyticsd
-com.apple.liquiddetectiond
-com.apple.countryd
-com.apple.cameracaptured
-com.apple.eligibilityd
-com.apple.airportd
-com.apple.AirPlayXPCHelper
-com.apple.gamepolicyd
-com.apple.corebrightnessd
-com.apple.mobileassetd
-com.apple.findmy.findmybeaconingd
-com.apple.nfcd
-com.apple.metadata.mds
-com.apple.endpointsecurity.endpointsecurityd
-org.cups.cupsd
-com.apple.ReportCrash.Root
-com.apple.audioanalyticsd
-com.apple.CrashReporterSupportHelper
-com.apple.audio.audiomxd
-com.apple.accessoryupdaterd
-com.apple.ctkd
-com.apple.modelcatalogd
-com.apple.colorsync.displayservices
-com.apple.modelmanagerd
-com.apple.colorsyncd
-com.apple.biomed
+sudo launchctl disable system/com.apple.nearbyd
+sudo launchctl disable system/com.apple.dprivacyd
+sudo launchctl disable system/com.apple.locationd
+sudo launchctl disable system/com.apple.wifianalyticsd
+sudo launchctl disable system/com.apple.icloud.searchpartyd
+sudo launchctl disable system/com.apple.icloud.findmydeviced
+sudo launchctl disable system/com.apple.osanalytics.osanalyticshelper
+sudo launchctl disable system/com.apple.SubmitDiagInfo
+sudo launchctl disable system/com.apple.symptomsd-diag
+sudo launchctl disable system/com.apple.symptomsd
+sudo launchctl disable system/com.apple.rtcreportingd
+sudo launchctl disable system/com.apple.systemstats.daily
+sudo launchctl disable system/com.apple.systemstats.analysis
+sudo launchctl disable system/com.apple.systemstats.microstackshot_periodic
+sudo launchctl disable system/com.apple.backupd
+sudo launchctl disable system/com.apple.backupd-helper
+sudo launchctl disable system/com.apple.cloudd
+sudo launchctl disable system/com.apple.seld
+sudo launchctl disable system/com.apple.findmymacmessenger
+sudo launchctl disable system/com.apple.GameController.gamecontrollerd
+sudo launchctl disable system/com.apple.rapportd
+sudo launchctl disable system/com.apple.triald.system
+sudo launchctl disable system/com.apple.ecosystemanalyticsd
+sudo launchctl disable system/com.apple.liquiddetectiond
+sudo launchctl disable system/com.apple.countryd
+sudo launchctl disable system/com.apple.cameracaptured
+sudo launchctl disable system/com.apple.eligibilityd
+# com.apple.airportd
+sudo launchctl disable system/com.apple.AirPlayXPCHelper
+sudo launchctl disable system/com.apple.gamepolicyd
+sudo launchctl disable system/com.apple.corebrightnessd
+sudo launchctl disable system/com.apple.mobileassetd
+sudo launchctl disable system/com.apple.findmy.findmybeaconingd
+sudo launchctl disable system/com.apple.nfcd
+# com.apple.metadata.mds
+sudo launchctl disable system/com.apple.endpointsecurity.endpointsecurityd
+sudo launchctl disable system/org.cups.cupsd
+sudo launchctl disable system/com.apple.ReportCrash.Root
+sudo launchctl disable system/com.apple.audioanalyticsd
+sudo launchctl disable system/com.apple.CrashReporterSupportHelper
+# com.apple.accessoryupdaterd
+# com.apple.ctkd
+sudo launchctl disable system/com.apple.modelcatalogd
+sudo launchctl disable system/com.apple.colorsync.displayservices
+# com.apple.modelmanagerd
+sudo launchctl disable system/com.apple.colorsyncd
+sudo launchctl disable system/com.apple.biomed
 
 # coreaudiod
-com.apple.audio.coreaudiod
-com.apple.audio.systemsoundserverd
-com.apple.timesync.audioclocksyncd
-com.apple.audio.AudioComponentRegistrar
+# com.apple.audio.audiomxd
+# com.apple.audio.coreaudiod
+# com.apple.audio.systemsoundserverd
+# com.apple.timesync.audioclocksyncd
+# com.apple.audio.AudioComponentRegistrar
 
-com.apple.coreduetd
-com.apple.ospredictiond
+sudo launchctl disable system/com.apple.coreduetd
+sudo launchctl disable system/com.apple.ospredictiond
 
-com.apple.warmd
-com.apple.DumpPanic
-com.apple.analyticsd
-com.apple.appleh13camerad
-com.apple.bluetoothd
-com.apple.contextstored
-com.apple.mediaremoted
-com.apple.mdmclient.daemon
-com.apple.online-auth-agent.xpc
-com.apple.remotemanagementd
-com.apple.lsd
-com.apple.coreservices.appleevents
-com.apple.nsurlsessiond_privileged
+sudo launchctl disable system/com.apple.warmd
+sudo launchctl disable system/com.apple.DumpPanic
+sudo launchctl disable system/com.apple.analyticsd
+sudo launchctl disable system/com.apple.appleh13camerad
+# com.apple.bluetoothd
+sudo launchctl disable system/com.apple.contextstored
+# com.apple.mediaremoted
+sudo launchctl disable system/com.apple.mdmclient.daemon
+sudo launchctl disable system/com.apple.online-auth-agent.xpc
+sudo launchctl disable system/com.apple.coreservices.appleevents
+sudo launchctl disable system/com.apple.nsurlsessiond_privileged
+
+# cant open apps if disabled
+# com.apple.lsd
 
 # disables dumb logs but services complain in launchd logs
-system/com.apple.logd
-system/com.apple.logd_helper
+sudo launchctl disable system/com.apple.logd
+sudo launchctl disable system/com.apple.logd_helper
 
-sudo launchctl bootout system/{name}
-sudo launchctl disable system/{name}
+sudo launchctl disable system/com.apple.remotemanagementd
+sudo launchctl disable system/com.apple.testmanagerd.remote
 
-com.apple.askpermissiond
-com.apple.parsecd
-com.apple.parsec-fbf
-com.apple.mdmclient.agent
-com.apple.routined
-com.apple.AppSSOAgent
-com.apple.icdd
-com.apple.controlcenter
-com.apple.videoconference.camera
-com.apple.studentd
-com.apple.TextInputSwitcher
-com.apple.feedbackd
-com.apple.Spotlight
-com.apple.AirPlayUIAgent
-com.apple.accessibility.heard
-com.apple.usernotificationsd
-com.apple.lockdownmoded
-com.apple.notificationcenterui.agent
-com.apple.MobileAccessoryUpdater.fudHelperAgent
-com.apple.BTServer.cloudpairing
-com.apple.SecureBackupDaemon
-com.apple.remindd
-com.apple.diagnostics_agent
-com.apple.voicebankingd
-com.apple.commerce
-com.apple.localizationswitcherd
-com.apple.MENotificationService
-com.apple.rapportd
-com.apple.bird
-com.apple.CommCenter
-com.apple.corespeechd
-com.apple.triald
-com.apple.homed
-com.apple.homeenergyd
-com.apple.siriactionsd
-com.apple.siriinferenced
-com.apple.siriknowledged
-com.apple.sirittsd
-com.apple.SiriTTSTrainingAgent
-com.apple.amp.mediasharingd
-com.apple.sharingd
-com.apple.businessservicesd
-com.apple.avatarsd
-com.apple.textunderstandingd
-com.apple.peopled
-com.apple.UserPictureSyncAgent
-com.apple.translationd
-com.apple.Safari.PasswordBreachAgent
-com.apple.SafariHistoryServiceAgent
-com.apple.email.maild
-com.apple.icloudmailagent
-com.apple.cmio.ContinuityCaptureAgent
-com.apple.weatherd
-com.apple.videosubscriptionsd
-com.apple.UsageTrackingAgent
-com.apple.universalaccessd
-com.apple.telephonyutilities.callservicesd
-com.apple.tipsd
-com.apple.suggestd
-com.apple.sidecar-relay
-com.apple.ScreenTimeAgent
-com.apple.quicklook
-com.apple.quicklook.ui.helper
-com.apple.quicklook.ThumbnailsAgent
-com.apple.protectedcloudstorage.protectedcloudkeysyncing
-com.apple.photolibraryd
-com.apple.photoanalysisd
-com.apple.newsd
-com.apple.mediaanalysisd
-com.apple.Maps.mapspushd
-com.apple.ManagedClientAgent.enrollagent
-com.apple.knowledge-agent
-com.apple.itunescloudd
-com.apple.intelligenceplatformd
-com.apple.imautomatichistorydeletionagent
-com.apple.imagent
-com.apple.icloud.searchpartyuseragent
-com.apple.iCloudNotificationAgent
-com.apple.icloud.fmfd
-com.apple.geodMachServiceBridge
-com.apple.gamed
-com.apple.followupd
-com.apple.financed
-com.apple.familynotificationd
-com.apple.familycontrols.useragent
-com.apple.familycircled
-com.apple.donotdisturbd
-com.apple.CoreLocationAgent
-com.apple.cloudphotod
-com.apple.cloudd
-com.apple.dataaccess.dataaccessd
-com.apple.calaccessd
-com.apple.CallHistoryPluginHelper
-com.apple.assistantd
-com.apple.assistant_service
-com.apple.ap.promotedcontentd
-com.apple.ap.adprivacyd
-com.apple.AMPArtworkAgent
-com.apple.AMPDeviceDiscoveryAgent
-com.apple.AMPLibraryAgent
-com.apple.EscrowSecurityAlert
-com.apple.transparencyd
-com.apple.amsengagementd
-com.apple.amsaccountsd
-com.apple.Safari.SafeBrowsing.Service
-com.apple.SafariBookmarksSyncAgent
-com.apple.ReportCrash
-com.apple.accessibility.MotionTrackingAgent
-com.apple.corespotlightd
-com.apple.corespotlightservice
-com.apple.managedcorespotlightd
-com.apple.spotlightknowledged.importer
-com.apple.spotlightknowledged
-com.apple.spotlightknowledged.updater
-com.apple.contactsd
-com.apple.geod
-com.apple.geoanalyticsd
-com.apple.appstoreagent
-com.apple.swtransparencyd
-com.apple.assistant_cdmd
-com.apple.metrickitd
-com.apple.audio.AudioComponentRegistrar
-com.apple.SoftwareUpdateNotificationManager
-com.apple.accessibility.axassetsd
-com.apple.replicatord
-com.apple.diagnosticextensionsd
-com.apple.swcd
-com.apple.mobiletimerd
-com.apple.duetexpertd
-com.apple.TextInputMenuAgent
-com.apple.BiomeAgent
-com.apple.colorsync.useragent
-com.apple.webprivacyd
-com.apple.AccessibilityVisualsAgent
-com.apple.proactiveeventtrackerd
-com.apple.biomesyncd
-com.apple.SafariLaunchAgent
-com.apple.dprivacyd
-com.apple.Safari.History
-com.apple.storedownloadd
-com.apple.AddressBook.SourceSync
-com.apple.AddressBook.abd
-com.apple.exchange.exchangesyncd
-com.apple.accessibility.AXVisualSupportAgent
-com.apple.parentalcontrols.check
-com.apple.CallHistorySyncHelper
-com.apple.chronod
-com.apple.generativeexperiences
-com.apple.cache_delete
-com.apple.identityservicesd
+# sudo launchctl bootout system/{name}
+# sudo launchctl disable system/{name}
 
-com.apple.Finder
-com.apple.mlhostd
-com.apple.wallpaper.agent
-com.apple.knowledgeconstructiond
-com.apple.ContextStoreAgent
-com.apple.intelligencecontextd
-com.apple.proactived
-com.apple.coreservices.useractivityd
-com.apple.milod
-com.apple.nsurlsessiond
+# com.apple.BTServer.cloudpairing
+# com.apple.audio.AudioComponentRegistrar
 
-# stage manager
-com.apple.WindowManager.agent
+launchctl disable gui/501/com.apple.AppSSOAgent
+launchctl disable gui/501/com.apple.betaenrollmentd
+launchctl disable gui/501/com.apple.sharingd
+launchctl disable gui/501/com.apple.AMPArtworkAgent
+launchctl disable gui/501/com.apple.AMPDeviceDiscoveryAgent
+launchctl disable gui/501/com.apple.AMPLibraryAgent
+launchctl disable gui/501/com.apple.AccessibilityVisualsAgent
+launchctl disable gui/501/com.apple.AddressBook.SourceSync
+launchctl disable gui/501/com.apple.AddressBook.abd
+launchctl disable gui/501/com.apple.AirPlayUIAgent
+launchctl disable gui/501/com.apple.BiomeAgent
+launchctl disable gui/501/com.apple.CallHistoryPluginHelper
+launchctl disable gui/501/com.apple.CallHistorySyncHelper
+launchctl disable gui/501/com.apple.CommCenter
+launchctl disable gui/501/com.apple.ContextStoreAgent
+launchctl disable gui/501/com.apple.CoreLocationAgent
+launchctl disable gui/501/com.apple.EscrowSecurityAlert
+launchctl disable gui/501/com.apple.Finder
+launchctl disable gui/501/com.apple.MENotificationService
+launchctl disable gui/501/com.apple.ManagedClientAgent.enrollagent
+launchctl disable gui/501/com.apple.Maps.mapspushd
+launchctl disable gui/501/com.apple.MobileAccessoryUpdater.fudHelperAgent
+launchctl disable gui/501/com.apple.ReportCrash
+launchctl disable gui/501/com.apple.Safari.History
+launchctl disable gui/501/com.apple.Safari.PasswordBreachAgent
+launchctl disable gui/501/com.apple.Safari.SafeBrowsing.Service
+launchctl disable gui/501/com.apple.SafariBookmarksSyncAgent
+launchctl disable gui/501/com.apple.SafariHistoryServiceAgent
+launchctl disable gui/501/com.apple.SafariLaunchAgent
+launchctl disable gui/501/com.apple.ScreenTimeAgent
+launchctl disable gui/501/com.apple.SecureBackupDaemon
+launchctl disable gui/501/com.apple.SiriTTSTrainingAgent
+launchctl disable gui/501/com.apple.SoftwareUpdateNotificationManager
+launchctl disable gui/501/com.apple.Spotlight
+launchctl disable gui/501/com.apple.TextInputMenuAgent
+launchctl disable gui/501/com.apple.TextInputSwitcher
+launchctl disable gui/501/com.apple.UsageTrackingAgent
+launchctl disable gui/501/com.apple.UserPictureSyncAgent
+launchctl disable gui/501/com.apple.accessibility.AXVisualSupportAgent
+launchctl disable gui/501/com.apple.accessibility.MotionTrackingAgent
+launchctl disable gui/501/com.apple.accessibility.axassetsd
+launchctl disable gui/501/com.apple.accessibility.heard
+launchctl disable gui/501/com.apple.amp.mediasharingd
+launchctl disable gui/501/com.apple.amsaccountsd
+launchctl disable gui/501/com.apple.amsengagementd
+launchctl disable gui/501/com.apple.ap.adprivacyd
+launchctl disable gui/501/com.apple.ap.promotedcontentd
+launchctl disable gui/501/com.apple.appstoreagent
+launchctl disable gui/501/com.apple.askpermissiond
+launchctl disable gui/501/com.apple.assistant_cdmd
+launchctl disable gui/501/com.apple.assistant_service
+launchctl disable gui/501/com.apple.assistantd
+launchctl disable gui/501/com.apple.avatarsd
+launchctl disable gui/501/com.apple.biomesyncd
+launchctl disable gui/501/com.apple.bird
+launchctl disable gui/501/com.apple.businessservicesd
+launchctl disable gui/501/com.apple.cache_delete
+launchctl disable gui/501/com.apple.calaccessd
+launchctl disable gui/501/com.apple.chronod
+launchctl disable gui/501/com.apple.cloudd
+launchctl disable gui/501/com.apple.cloudphotod
+launchctl disable gui/501/com.apple.cmio.ContinuityCaptureAgent
+launchctl disable gui/501/com.apple.colorsync.useragent
+launchctl disable gui/501/com.apple.commerce
+launchctl disable gui/501/com.apple.contactsd
+launchctl disable gui/501/com.apple.controlcenter
+launchctl disable gui/501/com.apple.coreservices.useractivityd
+launchctl disable gui/501/com.apple.corespeechd
+launchctl disable gui/501/com.apple.corespotlightd
+launchctl disable gui/501/com.apple.corespotlightservice
+launchctl disable gui/501/com.apple.dataaccess.dataaccessd
+launchctl disable gui/501/com.apple.diagnosticextensionsd
+launchctl disable gui/501/com.apple.diagnostics_agent
+launchctl disable gui/501/com.apple.donotdisturbd
+launchctl disable gui/501/com.apple.dprivacyd
+launchctl disable gui/501/com.apple.duetexpertd
+launchctl disable gui/501/com.apple.email.maild
+launchctl disable gui/501/com.apple.exchange.exchangesyncd
+launchctl disable gui/501/com.apple.familycircled
+launchctl disable gui/501/com.apple.familycontrols.useragent
+launchctl disable gui/501/com.apple.familynotificationd
+launchctl disable gui/501/com.apple.feedbackd
+launchctl disable gui/501/com.apple.financed
+launchctl disable gui/501/com.apple.followupd
+launchctl disable gui/501/com.apple.gamed
+launchctl disable gui/501/com.apple.generativeexperiences
+launchctl disable gui/501/com.apple.geoanalyticsd
+launchctl disable gui/501/com.apple.geod
+launchctl disable gui/501/com.apple.geodMachServiceBridge
+launchctl disable gui/501/com.apple.homed
+launchctl disable gui/501/com.apple.homeenergyd
+launchctl disable gui/501/com.apple.iCloudNotificationAgent
+launchctl disable gui/501/com.apple.icdd
+launchctl disable gui/501/com.apple.icloud.fmfd
+launchctl disable gui/501/com.apple.icloud.searchpartyuseragent
+launchctl disable gui/501/com.apple.icloudmailagent
+launchctl disable gui/501/com.apple.identityservicesd
+launchctl disable gui/501/com.apple.imagent
+launchctl disable gui/501/com.apple.imautomatichistorydeletionagent
+launchctl disable gui/501/com.apple.intelligencecontextd
+launchctl disable gui/501/com.apple.intelligenceplatformd
+launchctl disable gui/501/com.apple.itunescloudd
+launchctl disable gui/501/com.apple.knowledge-agent
+launchctl disable gui/501/com.apple.knowledgeconstructiond
+launchctl disable gui/501/com.apple.localizationswitcherd
+launchctl disable gui/501/com.apple.lockdownmoded
+launchctl disable gui/501/com.apple.managedcorespotlightd
+launchctl disable gui/501/com.apple.mdmclient.agent
+launchctl disable gui/501/com.apple.mediaanalysisd
+launchctl disable gui/501/com.apple.metrickitd
+launchctl disable gui/501/com.apple.milod
+launchctl disable gui/501/com.apple.mobiletimerd
+launchctl disable gui/501/com.apple.newsd
+launchctl disable gui/501/com.apple.notificationcenterui.agent
+launchctl disable gui/501/com.apple.nsurlsessiond
+launchctl disable gui/501/com.apple.parentalcontrols.check
+launchctl disable gui/501/com.apple.parsec-fbf
+launchctl disable gui/501/com.apple.parsecd
+launchctl disable gui/501/com.apple.peopled
+launchctl disable gui/501/com.apple.photoanalysisd
+launchctl disable gui/501/com.apple.photolibraryd
+launchctl disable gui/501/com.apple.proactived
+launchctl disable gui/501/com.apple.proactiveeventtrackerd
+launchctl disable gui/501/com.apple.protectedcloudstorage.protectedcloudkeysyncing
+launchctl disable gui/501/com.apple.quicklook
+launchctl disable gui/501/com.apple.quicklook.ThumbnailsAgent
+launchctl disable gui/501/com.apple.quicklook.ui.helper
+launchctl disable gui/501/com.apple.rapportd
+launchctl disable gui/501/com.apple.remindd
+launchctl disable gui/501/com.apple.replicatord
+launchctl disable gui/501/com.apple.routined
+launchctl disable gui/501/com.apple.sidecar-relay
+launchctl disable gui/501/com.apple.siriactionsd
+launchctl disable gui/501/com.apple.siriinferenced
+launchctl disable gui/501/com.apple.siriknowledged
+launchctl disable gui/501/com.apple.sirittsd
+launchctl disable gui/501/com.apple.spotlightknowledged
+launchctl disable gui/501/com.apple.spotlightknowledged.importer
+launchctl disable gui/501/com.apple.spotlightknowledged.updater
+launchctl disable gui/501/com.apple.storedownloadd
+launchctl disable gui/501/com.apple.studentd
+launchctl disable gui/501/com.apple.suggestd
+launchctl disable gui/501/com.apple.swcd
+launchctl disable gui/501/com.apple.swtransparencyd
+launchctl disable gui/501/com.apple.telephonyutilities.callservicesd
+launchctl disable gui/501/com.apple.textunderstandingd
+launchctl disable gui/501/com.apple.tipsd
+launchctl disable gui/501/com.apple.translationd
+launchctl disable gui/501/com.apple.transparencyd
+launchctl disable gui/501/com.apple.triald
+launchctl disable gui/501/com.apple.universalaccessd
+launchctl disable gui/501/com.apple.usernotificationsd
+launchctl disable gui/501/com.apple.videoconference.camera
+launchctl disable gui/501/com.apple.videosubscriptionsd
+launchctl disable gui/501/com.apple.voicebankingd
+launchctl disable gui/501/com.apple.wallpaper.agent
+launchctl disable gui/501/com.apple.weatherd
+launchctl disable gui/501/com.apple.webprivacyd
+launchctl disable gui/501/com.apple.mlhostd
+launchctl disable gui/501/com.apple.findmy.findmylocateagent
+
+# causes perm softlock
+# launchctl disable gui/501/com.apple.WindowManager.agent
+# launchctl disable gui/501/com.apple.SystemUIServer.agent
+
 
 # screen sharing (disabled to stop logs spam for missing audio)
-com.apple.replayd
-com.apple.SystemUIServer.agent
+launchctl disable gui/501/com.apple.replayd
 
-launchctl bootout gui/501/{name}
-launchctl disable gui/501/{name}
+# launchctl bootout gui/501/{name}
+# launchctl disable gui/501/{name}
 
-com.apple.siri.context.service
-com.apple.TextInputUI.xpc.CursorUIViewService
-com.apple.geod
-com.apple.accessibility.mediaaccessibilityd
-com.apple.TextInputUI.xpc.CursorUIViewService
-com.apple.siri.context.service
-com.apple.lsd
+launchctl disable user/501/com.apple.geod
+launchctl disable user/501/com.apple.siri.context.service
+launchctl disable user/501/com.apple.accessibility.mediaaccessibilityd
 
-launchctl bootout user/501/{name}
-launchctl disable user/501/{name}
+# com.apple.TextInputUI.xpc.CursorUIViewService
+# com.apple.TextInputUI.xpc.CursorUIViewService
+
+# cant open apps if disabled
+# com.apple.lsd
+
+# launchctl bootout user/501/{name}
+# launchctl disable user/501/{name}
